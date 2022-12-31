@@ -23,14 +23,14 @@ def display(row1, string1, sep1, row2, string2, sep2, row3, string3):
     print(sep2)
     print(string3)
 def UserChoice():
-    choice = (input('Please enter a value corresponding to the available spots in the chart to place your mark (1-9): '))
+    choice = input('Please enter a value corresponding to the available spots in the chart to place your mark (1-9): ')
     return(choice)
 while turn < 10:
     if playerTurn == 1:
         print(display(row1, string1, sep1, row2, string2, sep2, row3, string3))
         print('Player 1:')
         UserChoice()
-        print(row1(choice))
+        print(choice)
         print(display(row1, string1, sep1, row2, string2, sep2, row3, string3))
         playerTurn += 1
         turn += 1
@@ -38,7 +38,6 @@ while turn < 10:
         print(display(row1, string1, sep1, row2, string2, sep2, row3, string3))
         print('Player 2:')
         UserChoice()
-        print(row1(choice))
         print(display(row1, string1, sep1, row2, string2, sep2, row3, string3))
         playerTurn -= 1
         turn += 1
